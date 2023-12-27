@@ -1,0 +1,73 @@
+Author:  Sai.
+Company: SoftwareThub.
+
+Project Setup
+    What Softwares We Need:
+    RealTime - Software Rquest - Manager Approval
+
+    node [https://nodejs.org/en/download]
+        - Environment Variables -> Setup
+    NPM - Node Package Manager(npm i packagename) - it will come with Node.
+    NVM - Node Version Manager -(nvm v16) Sperate Intalation [npm i nvm]
+
+    Code Editor:
+        - Visual Studio Code - VSC - [https://code.visualstudio.com/download]
+
+    Version Control:
+        - GitHub [https://git-scm.com/downloads]
+
+    Optional:
+     2021 - code base - 16
+     2023 - Node 20
+
+    Folder Structure:
+    Create a folder in React - npx create-react-app paytm_clone - VIT
+    MVC - Structure
+
+    Project Folder:
+        - node_modules
+        - build
+        - public
+        - src[Folder]
+            - components[Folder]
+                - filename-component.js [File]
+                - filename-container.js [File]
+            - pages[Folder]
+                - dashboard-page.js [File]
+                - login-page.js [File]
+            - utils[Folder]
+                - helpers.js [File]
+        - index.js
+        - package.json
+        - package-lock.json
+        - webpack-config.js
+
+Source Control:
+General Git Commands in Real Time:
+
+Git status - To Track our changes
+Git add . - To add your changes to git hub.
+Git Commit -m "I added Author and Company Name in the Note Page"
+Git push origin <branchname>[main]
+Git checkout -b featurbranch
+
+Created Dev Branch for Development:
+
+Morning 10 AM - Branch Created - Changes - Past - app.js
+
+Evening 5 PM - Dev -> Surya changes Merged - Updated Past - app.js
+
+Evening 7 PM - DEV Pull Request Raised: [My Changes] - conflicts
+
+Git pull origin dev 7 + 5; app.js
+
+5PM + 7PM -> PR - Lead -> Dev Latest
+
+9PM PR -> Conflicts - Git Pull - PR
+
+
+CI/CD Pipeline - DevOps - Jenkins
+git dev -> npm build -> build -> Dev Server
+
+
+
