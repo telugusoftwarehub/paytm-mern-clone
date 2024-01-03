@@ -1,13 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from './components/button';
+import LandingPage from './pages/landing-page';
+import BusinessLandingPage from './pages/business-page';
 
 function App() {
-  return (
-    <div className="App">
-      <Button />
-    </div>
-  );
+  // return <BusinessLandingPage />;
+  return <LandingPage />;
+
 }
 
 export default App;

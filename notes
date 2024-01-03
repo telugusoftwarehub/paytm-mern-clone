@@ -70,4 +70,72 @@ CI/CD Pipeline - DevOps - Jenkins
 git dev -> npm build -> build -> Dev Server
 
 
+Pre-Requiresites
+    MERN FULL STACK:
+    
+    HTML
+    CSS
+    Javascript
+    
+    React
+
+    Backend:
+    Node & Express
+
+    DB
+    MongoDB
+
+
+Projects: adidas, banking [Indian, USA, Eng], Research [AI - ChatGpt]
+
+.js -> test case[jest] - POC [Proof of concept - Research]
+
+Wallsfargo - ODC
+
+Deloitte -> Server Based -> Ecommerce, Bank, 
+
+Paytm - Modules
+
+Login - Authentication - Dummy JSON [JWT]
+    - SMS Gateway Integration - OTP [OTP Login]
+    - Gmail - [How to login with gmail]
+
+List of Categories  
+    - Shopping Cart
+        Products List
+    - Mobile Recharge
+        - GateWay
+    - Payment
+        - Payu/PhonePe - GateWay
+
+
+Real Time Loo Servers ?
+
+Localhost - for loacal Development
+    Frontend [React]
+    Backend[Middleware] - [Java/Node/PHP/Dot.Net]
+    DB[Oracle/mySql/MongoDB]
+
+    CI/CD Pipelines - Jenkins - Github 
+
+    Master - Stable Code 
+    sprint1
+    Dev
+    FeatureBranch - For Our Own Development
+
+    local: http://localhost:3000
+
+    Dev - Unit Testing http://www.dev.adidas.com [Deloitte]
+    QA - [SIT - Server Integration Testing]- Testers[Our Own Organaization] - http://www.qa.adidas.com
+
+    SignOff ->
+    Know Issues 
+
+    UAT - User Accepetation Testing  - http://www.uat.addidas.com - Client
+    UAT - Other Organaisation [ Accenture ] Stage
+
+    Stage - Stable code -  http://www.addidas.stage.com
+
+    Production  - http://www.addidas.com - Live
+
 
