@@ -1,9 +1,19 @@
+import { Link } from "react-router-dom";
+
 const NavComponent = ({ menuItems }) => {
     return <nav className="nav">
+        {menuItems.length === 0 && "Loading...."}
         <ul className="flex nav-links">
             {
                 menuItems.length > 0 && menuItems.map((item) => {
-                    return <li>{item}</li>
+                    const template = () => {
+                        if (item === "Paytm  for Business") {
+                            return <Link to="/business">{item}</Link>
+                        } else {
+                            return item;
+                        }
+                    }
+                    return <li>{template()}</li>
                 })
             }
         </ul>

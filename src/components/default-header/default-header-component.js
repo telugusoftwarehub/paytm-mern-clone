@@ -1,12 +1,11 @@
 import defaultLogo from "../../images/logo.svg";
 import Nav from "../common/nav";
-import { defaultNavLinks } from "../../configs/navlinks";
 import Logo from "../common/logo";
 
-const DefaultHeaderComponent = () => {
+const DefaultHeaderComponent = (props) => {
     return <div className="flex">
         <Logo src={defaultLogo} />
-        <Nav menuItems={defaultNavLinks} />
+        <Nav menuItems={props.menuItems} />
         <div className="btnSignIn">
             <button>Sign In</button>
         </div>

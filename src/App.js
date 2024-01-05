@@ -1,11 +1,18 @@
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-import LandingPage from './pages/landing-page';
-import BusinessLandingPage from './pages/business-page';
+import { paytm_routes } from "./configs/routes-config";
 
 function App() {
-  // return <BusinessLandingPage />;
-  return <LandingPage />;
-
+  return <BrowserRouter>
+    <Routes>
+      {
+        paytm_routes.map((item) => {
+          return <Route path={item.path} element={item.component} />
+        })
+      }
+    </Routes>
+  </BrowserRouter>
 }
 
 export default App;
