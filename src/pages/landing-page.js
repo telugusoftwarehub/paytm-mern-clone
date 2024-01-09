@@ -6,7 +6,6 @@ import Form from "../components/form";
 import banner from "../images/1697527211984.avif";
 import logo_small from "../images/logo_1.avif";
 
-
 const LandingPage = () => {
     return <>
         <Container>
