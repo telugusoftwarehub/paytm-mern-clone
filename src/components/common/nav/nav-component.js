@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const NavComponent = ({ menuItems }) => {
     return <nav className="nav">
         {menuItems.length === 0 && "Loading...."}
-        <ul className="flex nav-links">
+        <ul className="d-flex nav-links">
             {
                 menuItems.length > 0 && menuItems.map((item) => {
                     const template = () => {

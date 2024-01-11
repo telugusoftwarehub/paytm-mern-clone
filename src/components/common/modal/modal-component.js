@@ -30,6 +30,8 @@ const ModalComponent = (props) => {
                         })
                     }
                     <button className="loginBtn"> LOGIN </button>
+                    <button onClick={() => props.login()}>Sign in with Google 🚀</button>
+                    {/* <GoogleLogin />; */}
                 </div>
             </div>
             <div className="footer">By signing in, you agree to our privacy policy and terms of use</div>
