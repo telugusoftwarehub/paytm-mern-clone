@@ -2,6 +2,7 @@ import { MODAL_HEADING_TXT } from "../../../configs/constants";
 import { loginForm } from "../../../configs/forms/login-form";
 import { Row } from "reactstrap";
 import "./modal-component.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ModalComponent = (props) => {
     return <>
@@ -29,9 +30,11 @@ const ModalComponent = (props) => {
                             </Row>
                         })
                     }
-                    <button className="loginBtn"> LOGIN </button>
-                    <button onClick={() => props.login()}>Sign in with Google 🚀</button>
-                    {/* <GoogleLogin />; */}
+                    <button className="loginBtn" onClick={props.fetchLogin}> LOGIN </button>
+                    <button onClick={() => props.login()}>
+                        {/* <FontAwesomeIcon icon=""/> */}
+                        Google
+                    </button>
                 </div>
             </div>
             <div className="footer">By signing in, you agree to our privacy policy and terms of use</div>
