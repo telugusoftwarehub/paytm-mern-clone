@@ -1,9 +1,11 @@
 import ModalComponent from "./modal-component";
 import { useGoogleLogin } from '@react-oauth/google';
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import useFetch from "../../../hooks/fetch";
+import { useNavigate } from "react-router-dom";
 
 const ModalContainer = (props) => {
+  const [apiCall, setAPICall] = useFetch(null);
   const navigate = useNavigate();
 
   const login = useGoogleLogin({
@@ -19,18 +21,14 @@ const ModalContainer = (props) => {
   });
 
   const fetchLogin = () => {
+
+    // console.log('apiData: ', apiData)
+    setAPICall("https://dummyjson.com/products/1");
+    console.log("apiCall: ", apiCall)
     //GET, POST, PUT/PATCH, DELETE
     //http request
     //json, html, xml, text
-    fetch('https://dummyjson.com/products/1', {
-      method: "PUT",
-      "Content-Type": "application/text"
-    })
-      .then(response => response.json())
-      .then((response) => {
-        console.log(response);
-        navigate('/dashboard');
-      })
+    
 
     // axios.get("./responses/logindata.json").then((response) => {
     //   const { data } = response;
@@ -40,6 +38,14 @@ const ModalContainer = (props) => {
     //     navigate('/dashboard');
     //   }
     // })
+  }
+
+  const getData = () => {
+    setAPICall({
+      url: "https://dummyjson.com/products/1",
+      method: "GET"
+    });
+
   }
 
   return <ModalComponent
