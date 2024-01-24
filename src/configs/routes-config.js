@@ -3,6 +3,7 @@ import LandingPage from '../pages/landing-page';
 import BusinessLandingPage from '../pages/business-page';
 import ErrorPage from '../pages/error-page';
 import DashBoardPage from '../pages/dashboard-page';
+import ProductDetailsPage from '../pages/productdetail-page';
 
 export const paytm_routes = [
     {
@@ -20,5 +21,9 @@ export const paytm_routes = [
     {
         path: "/dashboard",
         component: <DashBoardPage />
+    },
+    {
+        path: "/details/:id",
+        component: <ProductDetailsPage />
     }
 ]

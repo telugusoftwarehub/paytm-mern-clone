@@ -18,7 +18,8 @@ const DefaultHeaderContainer = () => {
         setShowModal(!showModal)
     }
 
-    const closeModalHandler = () => {
+    const closeModalHandler = (event) => {
+        event.preventDefault();
         setShowModal(false);
     }
 
