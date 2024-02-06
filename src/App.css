@@ -85,6 +85,7 @@ ul {
 .banner {
   height: 400px;
   position: relative;
+  padding-top: 128px;
 }
 
 .banner .paytm_app_img {

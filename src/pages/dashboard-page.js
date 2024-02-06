@@ -3,9 +3,14 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import { client } from "../axiosConfig";
 import sha256 from 'crypto-js/sha256';
+import { useSelector } from "react-redux";
 
 const DashBoardPage = () => {
     const [data, setData] = useState([])
+    const userLoggedIn = useSelector((state) => state.glogin.isLoggedIn);
+    const authToken = useSelector((state) => state.glogin.token);
+
+
     useEffect(() => {
         client.get("/products").then((response) => {
             console.log('Response: ', response.data.products);
@@ -16,7 +21,10 @@ const DashBoardPage = () => {
     }, [])
     return <Container>
         <Row>
-            <Col> <h1 className="text-center text-uppercase"> Dashboard Page after Successful Login!.  </h1> </Col>
+            <Col>
+            <h1 className="text-center text-uppercase"> Dashboard Page after Successful Login {userLoggedIn ? "True" : "False"}!.  </h1>
+            <h2>{authToken}</h2>
+            </Col>
         </Row>
         <Row>
             <ul className="products d-flex">

@@ -1,12 +1,15 @@
 import ModalComponent from "./modal-component";
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from "axios";
+import { googleLogin } from "../../../redux/actions/authentication";
 import useFetch from "../../../hooks/fetch";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const ModalContainer = (props) => {
   const [apiCall, setAPICall] = useFetch(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const login = useGoogleLogin({
     onSuccess: response => {
@@ -23,8 +26,11 @@ const ModalContainer = (props) => {
   const fetchLogin = () => {
 
     // console.log('apiData: ', apiData)
-    setAPICall("https://dummyjson.com/products/1");
-    console.log("apiCall: ", apiCall)
+    // setAPICall("https://dummyjson.com/products/1");
+    dispatch(googleLogin("12345"))
+    navigate('/dashboard');
+
+
     //GET, POST, PUT/PATCH, DELETE
     //http request
     //json, html, xml, text

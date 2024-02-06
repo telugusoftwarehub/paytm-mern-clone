@@ -8,13 +8,19 @@ import logo_small from "../images/logo_1.avif";
 
 const LandingPage = () => {
     return <>
-        <Container>
-            <DefaultHeader />
+        {/* <Container className="shadow-lg position-fixed z-4 top-0 start-0" fluid> */}
+        <Container className="shadow-lg  z-4 top-0 start-0" fluid>
+            <Container>
+                <DefaultHeader />
+            </Container>
         </Container>
-        <Container className="banner" fluid>
+        <Container className="p-3 bg-light" fluid>
+            <p className="text-center p-0 m-0">No Wallet KYC Required 😊 to pay using UPI on Paytm. Learn more.</p>
+        </Container>
+        <Container className="banner " fluid>
             <Container>
                 <Row xs="1" md="2">
-                    <Col className="about">
+                    <Col className="about pt-5">
                         <div className="paytm_logo">
                             <img src={logo_small} />
                         </div>
